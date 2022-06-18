@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\CategoriasExistentesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CategoriasPredefinidasWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CriarCategoriaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CriarListaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CriarProdutoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditarCategoriaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditarListaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditarProdutoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RemoverCategoriaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RemoverProdutoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SobreWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\VerCategoriaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\VerListaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\VerProdutoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResourceDictionaries\ButtonDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResourceDictionaries\ComboboxDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResourceDictionaries\MenuDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResourceDictionaries\RectangleDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResourceDictionaries\TextBlockDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResourceDictionaries\TextBoxDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CategoriasExistentesWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CategoriasPredefinidasWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CriarCategoriaWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CriarListaWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CriarProdutoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EditarCategoriaWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EditarListaWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EditarProdutoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RemoverCategoriaWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RemoverProdutoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SobreWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VerCategoriaWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VerListaWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VerProdutoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

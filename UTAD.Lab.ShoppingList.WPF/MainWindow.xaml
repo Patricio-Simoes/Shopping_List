@@ -1,0 +1,261 @@
+﻿<Window x:Class="UTAD.Lab.ShoppingList.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UTAD.Lab.ShoppingList.WPF"
+        mc:Ignorable="d"
+        Title="Janela Principal" Height="730" Width="1350" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize"
+        Background="LightGray">
+    
+    <!-- Dictionaries -->
+            <Window.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="/ResourceDictionaries/RectangleDictionary.xaml"/>
+                        <ResourceDictionary Source="/ResourceDictionaries/ButtonDictionary.xaml"/>
+                        <ResourceDictionary Source="/ResourceDictionaries/MenuDictionary.xaml"/>
+                        <ResourceDictionary Source="/ResourceDictionaries/ComboBoxDictionary.xaml"/>
+                        <ResourceDictionary Source="/ResourceDictionaries/TextBlockDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+            </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Menu -->
+        <Menu Grid.Row="1" Grid.RowSpan="5" Style="{StaticResource menuStyle}">
+            <MenuItem x:Name="categoriasPredefinidasMenuItem"
+                      Header="Produtos/Categorias Predefinidas"
+                      Style="{StaticResource menuItemStyle}"
+                      VerticalAlignment="Center"
+                      Click="categoriasPredefinidasMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/Category.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="categoriasExistentesMenuItem"
+                      Header="Produtos/Categorias Existentes"
+                      Style="{StaticResource menuItemStyle}"
+                      Click="categoriasExistentesMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/Product.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <Rectangle Style="{StaticResource rectangleStyle}"/>
+            <MenuItem x:Name="criarListaWindow"
+                      Header="Criar Lista"
+                      Style="{StaticResource menuItemStyle}"
+                      Click="criarListaWindow_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/Add List.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="editarListaMenuItem"
+                      Header="Editar Lista"
+                      Style="{StaticResource menuItemStyle}"
+                      Click="editarListaMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/Edit List.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="removerListaMenuItem"
+                      Header="Remover Lista"
+                      Style="{StaticResource menuItemStyle}"
+                      Click="removerListaMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/Trash Can.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="verListasMenuItem"
+                      Header="Ver Listas"
+                      Style="{StaticResource menuItemStyle}"
+                      Click="verListasMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/View List.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <Rectangle Style="{StaticResource rectangleStyle}"/>
+            <MenuItem  x:Name="criarProdutoMenuItem"
+                       Header="Criar Produto"
+                       Style="{StaticResource menuItemStyle}"
+                       Click="criarProdutoMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/Add Product.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="editarProdutoMenuItem"
+                      Header="Editar Produto"
+                      Style="{StaticResource menuItemStyle}"
+                      Click="editarProdutoMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/Edit List.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="removerProdutoMenuItem"
+                      Header="Remover Produto"
+                      Style="{StaticResource menuItemStyle}"
+                      Click="removerProdutoMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/Trash Can.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="verProdutoMenuItem"
+                      Header="Ver Produtos"
+                      Style="{StaticResource menuItemStyle}"
+                      Click="verProdutoMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/View List.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <Rectangle Style="{StaticResource rectangleStyle}"/>
+            <MenuItem x:Name="criarCategoriaMenuItem"
+                      Header="Criar Categoria"
+                      Style="{StaticResource menuItemStyle}"
+                      Click="criarCategoriaMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/Add Product.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="editarCategoriaMenuItem"
+                      Header="Editar Categoria"
+                      Style="{StaticResource menuItemStyle}"
+                      Click="editarCategoriaMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/Edit List.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="Remover Categoria"
+                      Style="{StaticResource menuItemStyle}"
+                      Click="removerCategoriaMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/View List.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+                <MenuItem x:Name="verCategoriaMenuItem"
+                          Header="Ver Categoria"
+                          Style="{StaticResource menuItemStyle}"
+                          Click="verCategoriaMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Icons/Trash Can.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            <Rectangle Style="{StaticResource rectangleStyle}"/>
+            <MenuItem x:Name="sobreMenuItem"
+                      Header="Sobre"
+                      Margin="0,200,0,0"
+                      Style="{StaticResource menuItemStyle}"
+                      Click="sobreMenuItem_Click">
+                <MenuItem.Icon>
+                    <Image Source="/Icons/Info.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+        </Menu>
+        <!-- Retângulo azul superior -->
+        <Rectangle Grid.ColumnSpan="3"
+                   Style="{StaticResource blueRectangleStyle}"/>
+        <!-- Retângulo azul inferior -->
+        <Rectangle Grid.Row ="5"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Style="{StaticResource blueRectangleStyle}"/>
+        <!-- ComboBox -->
+        <ComboBox x:Name="listComboBox"
+                  Grid.Column="1"
+                  HorizontalAlignment="Left"
+                  Width="300"
+                  Margin="20" SelectionChanged="listComboBox_SelectionChanged"/>
+        <!-- Listas -->
+        <GroupBox x:Name="gbListas" Grid.Row="1" Grid.Column="1" Grid.RowSpan="4" Header="Lista de Produtos" FontSize="20" Margin="20">
+            <ListView x:Name="lvListas" IsEnabled="False">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ID Produto" Width="150" DisplayMemberBinding="{Binding id_Produto}"/>
+                        <GridViewColumn Header="Nome" Width="400" DisplayMemberBinding="{Binding nome}"/>
+                        <GridViewColumn Header="Quantidade" Width="200" DisplayMemberBinding="{Binding quantidade}"/>
+                        <GridViewColumn Header="Comprado" Width="160">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding Path=comprado}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+        <!-- Imagem TendesAfter -->
+        <Image Grid.Row="6"
+               Grid.Column="1"
+               Margin="230,15,700,15"
+               Source="/Icons/Beer_Logo.png"/>
+        <TextBlock Text="Desenvolvido por TendesAfterStudio @Todos os direitos reservados"
+                   Grid.Row="6"
+                   Grid.Column="1"
+                   FontWeight="Bold"
+                   FontSize="16"
+                   Margin="270,15,380,15"
+                   Style="{StaticResource textBlockStyle}"/>
+        <!-- Botão Guardar -->
+        <Button x:Name="guardarListaButton"
+                Grid.Row="1"
+                Grid.Column="2"
+                Margin="35,20,35,80"
+                Background="{x:Null}"
+                BorderBrush="{x:Null}"
+                Click="guardarListaButton_Click">
+            <Image Source="/Icons/Save.png"/>
+        </Button>
+        <!-- Botão adicionar lista -->
+        <Button x:Name="adicionarListaButton"
+                Grid.Row="4"
+                Grid.Column="2"
+                Margin="35,80,35,20"
+                Background="{x:Null}"
+                BorderBrush="{x:Null}"
+                Click="adicionarListaButton_Click">
+            <Image Source="/Icons/Add Product.png"/>
+        </Button>
+        <!-- Valor em falta -->
+        <Image Grid.Row="5"
+               Grid.Column="1"
+               Margin="750,10,175,10"
+               Source="/Icons/Calculator.png"/>
+        <TextBlock x:Name="lblFalta"
+                   Grid.Row="5"
+                   Grid.Column="1"
+                   Margin="810,10,70,10"
+                   Text="Valor em Falta: 00,00€"
+                   Style="{StaticResource textBlockStyle}"
+                   VerticalAlignment="Center"/>
+        <!-- Valor pago -->
+        <Image Grid.Row="5"
+               Grid.Column="1"
+               Margin="920,10,5,10"
+               Source="/Icons/Shopping Cart.png"/>
+        <TextBlock x:Name="lblPago"
+                   Grid.Row="5"
+                   Grid.Column="2"
+                   Margin="0,0,30,0"
+                   Text="Valor Pago: 00,00€"
+                   Style="{StaticResource textBlockStyle}"
+                   VerticalAlignment="Center"/>
+     </Grid>
+</Window>

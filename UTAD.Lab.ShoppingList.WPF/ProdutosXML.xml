@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Produtos>
+	<Produto id_Produto="1" id_Categoria="1" nome="Pão da Avó" descrição="Produto Predefinido" preço="0,99" unidade="Individual" fixo="true"/>
+	<Produto id_Produto="2" id_Categoria="4" nome="Leite Magro" descrição="Produto Predefinido" preço="1,25" unidade="Embalagem" fixo="true"/>
+	<Produto id_Produto="3" id_Categoria="3" nome="Manteiga" descrição="Produto Predefinido" preço="1,30" unidade="Individual" fixo="true"/>
+	<Produto id_Produto="4" id_Categoria="7" nome="Martelo" descrição="Produto Predefinido" preço="4,99" unidade="Individual" fixo="true"/>
+	<Produto id_Produto="5" id_Categoria="1" nome="Croissant" descrição="Produto Predefinido" preço="0,93" unidade="Individual" fixo="true"/>
+	<Produto id_Produto="6" id_Categoria="5" nome="Lixívia" descrição="Produto Predefinido" preço="1,49" unidade="Embalagem" fixo="true"/>
+	<Produto id_Produto="7" id_Categoria="1" nome="Pão de Forma" descrição="Produto Predefinido" preço="0,50" unidade="Embalagem" fixo="true"/>
+	<Produto id_Produto="8" id_Categoria="1" nome="Bolo Rei" descrição="Produto Predefinido" preço="1,99" unidade="Individual" fixo="true"/>
+</Produtos>

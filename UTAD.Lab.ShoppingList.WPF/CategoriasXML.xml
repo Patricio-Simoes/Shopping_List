@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Categorias>
+	<Categoria id_Categoria="1" nome="Padaria" observações="Categoria Predefinida" fixa="true"/>
+	<Categoria id_Categoria="2" nome="Bazar" observações="Categoria Predefinida" fixa="true"/>
+	<Categoria id_Categoria="3" nome="Mercearia" observações="Categoria Predefinida" fixa="true"/>
+	<Categoria id_Categoria="4" nome="Frios e Laticínios" observações="Categoria Predefinida" fixa="true"/>
+	<Categoria id_Categoria="5" nome="Limpeza" observações="Categoria Predefinida" fixa="true"/>
+	<Categoria id_Categoria="6" nome="Ferragens" observações="Categoria Predefinida" fixa="true"/>
+	<Categoria id_Categoria="7" nome="Bricolage" observações="Categoria Predefinida" fixa="true"/>
+	<Categoria id_Categoria="8" nome="Automóveis" observações="Categoria Predefinida" fixa="true"/>
+</Categorias>

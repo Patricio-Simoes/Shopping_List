@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ListasCompras>
+  <Listas>
+    <Lista>
+      <Produto id_Produto="1" nome="Pão da Avó" quantidade="1" comprado="false" />
+      <Produto id_Produto="2" nome="Leite Magro" quantidade="6" comprado="false" />
+      <Produto id_Produto="3" nome="Ferrari" quantidade="12" comprado="false" />
+      <Produto id_Produto="4" nome="Martelo" quantidade="6" comprado="false" />
+      <Produto id_Produto="7" nome="Pão de Forma" quantidade="1" comprado="false" />
+      <Produto id_Produto="8" nome="Bolo Rei" quantidade="0.5" comprado="false" />
+    </Lista>
+    <Lista>
+      <Produto id_Produto="5" nome="Croissant" quantidade="1" comprado="true" />
+      <Produto id_Produto="8" nome="Bolo Rei" quantidade="4" comprado="false" />
+    </Lista>
+    <Lista>
+      <Produto id_Produto="9" nome="Produto Teste" quantidade="2" comprado="false" />
+      <Produto id_Produto="2" nome="Leite Magro" quantidade="1" comprado="true" />
+      <Produto id_Produto="1" nome="Pão da Avó" quantidade="3" comprado="true" />
+    </Lista>
+  </Listas>
+</ListasCompras>
