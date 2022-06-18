@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Domain", "0 - Domain", "{97955005-834F-45EF-B181-46D8A5BC55E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Desktop", "1 - Desktop", "{46920C41-9BE0-4548-BF3F-BC8511D0D847}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CB50D28F-EEDF-4186-AD9C-ACC7E2839F09}"
+	ProjectSection(SolutionItems) = preProject
+		CategoriasXML.xml = CategoriasXML.xml
+		ListasXML.xml = ListasXML.xml
+		ProdutosXML.xml = ProdutosXML.xml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UTAD.Lab.ShoppingList.WPF", "UTAD.Lab.ShoppingList.WPF\UTAD.Lab.ShoppingList.WPF.csproj", "{89241422-3FD0-4F0B-B8DE-B52E2BB63859}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{692F7983-FD91-4432-B58E-D2E87910710A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89241422-3FD0-4F0B-B8DE-B52E2BB63859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89241422-3FD0-4F0B-B8DE-B52E2BB63859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89241422-3FD0-4F0B-B8DE-B52E2BB63859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89241422-3FD0-4F0B-B8DE-B52E2BB63859}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{89241422-3FD0-4F0B-B8DE-B52E2BB63859} = {46920C41-9BE0-4548-BF3F-BC8511D0D847}
+		{692F7983-FD91-4432-B58E-D2E87910710A} = {CB50D28F-EEDF-4186-AD9C-ACC7E2839F09}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F716B77-5649-4CF3-8093-1F9AF3E53745}
+	EndGlobalSection
+EndGlobal
