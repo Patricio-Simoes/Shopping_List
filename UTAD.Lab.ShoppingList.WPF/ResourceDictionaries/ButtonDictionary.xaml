@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Botão Azul escuro -->
+    <Style TargetType="Button" x:Key="loginButtonStyle">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="#0688D1"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+    </Style>
+    <Style TargetType="Button" x:Key="DeleteButtonStyleYes">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="Green"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+    </Style>
+    <Style TargetType="Button" x:Key="DeleteButtonStyleNo">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="Red"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+    </Style>
+</ResourceDictionary>

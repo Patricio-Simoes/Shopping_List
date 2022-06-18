@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Menu (Fundo Laranja) -->
+    <Style TargetType="Menu" x:Key="menuStyle">
+        <Setter Property="Background" Value="#FB8500"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+    </Style>
+    <!-- Menu (Fundo Cinza) -->
+    <Style TargetType="Menu" x:Key="menuStyle2">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+    </Style>
+    <!-- MenuItems -->
+    <Style TargetType="MenuItem" x:Key="menuItemStyle">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="Margin" Value="0,1.1"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    <!-- MenuItems -->
+    <Style TargetType="MenuItem" x:Key="menuItemStyle2">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="Margin" Value="0,1.1"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+</ResourceDictionary>

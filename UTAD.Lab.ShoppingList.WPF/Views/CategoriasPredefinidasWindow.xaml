@@ -1,0 +1,77 @@
+﻿<Window x:Class="UTAD.Lab.ShoppingList.WPF.Views.CategoriasPredefinidasWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UTAD.Lab.ShoppingList.WPF.Views"
+        mc:Ignorable="d"
+         Title="Categorias e Categorias Predefinidos" Height="730" Width="1350" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <!-- Dictionaries -->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceDictionaries/RectangleDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/TextBlockDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/ComboboxDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/TextBoxDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/MenuDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Retângulo azul superior -->
+        <Rectangle Grid.ColumnSpan="3" Style="{StaticResource blueRectangleStyle}"/>
+        <!-- Retângulo azul inferior -->
+        <Rectangle Grid.Row ="5" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource blueRectangleStyle}"/>
+        <!-- Imagem TendesAfter -->
+        <Image Grid.Row="6" Grid.Column="1" Margin="230,15,700,15" Source="/Icons/Beer_Logo.png"/>
+        <TextBlock Text="Desenvolvido por TendesAfterStudio @Todos os direitos reservados" Grid.Row="6" Grid.Column="1" FontWeight="Bold" FontSize="16" Margin="270,15,380,15" Style="{StaticResource textBlockStyle}"/>
+        <!-- Retângulos cinzentos separadores-->
+        <Rectangle Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource grayRectangleStyle}" Height="40"/>
+        <!-- TextBlocks -->
+        <ComboBox x:Name="cbCategorias" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource comboBoxStyle}" Margin="100,5,800,125" SelectionChanged="cbCategorias_SelectionChanged"/>
+        <!-- ListView Categorias -->
+        <ListView x:Name="lvCategorias" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3" Margin="0,40" IsEnabled="False" Visibility="Hidden">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID Categoria" Width="auto" DisplayMemberBinding="{Binding id_Categoria}"/>
+                    <GridViewColumn Header="Nome" Width="200" DisplayMemberBinding="{Binding nome}"/>
+                    <GridViewColumn Header="Observações" Width="1100" DisplayMemberBinding="{Binding observações}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <!-- ListView Produtos -->
+        <ListView x:Name="lvProdutos" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3" Margin="0,40" IsEnabled="False" Visibility="Hidden">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID Produto" Width="100" DisplayMemberBinding="{Binding id_Produto}"/>
+                    <GridViewColumn Header="ID Categoria" Width="100" DisplayMemberBinding="{Binding id_Categoria}"/>
+                    <GridViewColumn Header="Nome" Width="200" DisplayMemberBinding="{Binding nome}"/>
+                    <GridViewColumn Header="Descrição" Width="740" DisplayMemberBinding="{Binding descrição}"/>
+                    <GridViewColumn Header="Preço (€)" Width="100" DisplayMemberBinding="{Binding preço}"/>
+                    <GridViewColumn Header="Unidade" Width="100" DisplayMemberBinding="{Binding unidade}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <!-- Botão voltar para trás -->
+        <Button x:Name="backButton" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,15,15,15" Background="{x:Null}" BorderBrush="{x:Null}" Click="backButton_Click">
+            <Image Source="/Icons/Arrow Back.png"/>
+        </Button>
+        <!-- Misc -->
+        <TextBlock Text="Categorias e Produtos Predefinidas" Grid.Column="1" Margin="20,10,350,10" FontSize="36" FontWeight="Bold" Foreground="White"/>
+    </Grid>
+</Window>

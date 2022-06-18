@@ -1,0 +1,69 @@
+﻿<Window x:Class="UTAD.Lab.ShoppingList.WPF.Views.VerProdutoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UTAD.Lab.ShoppingList.WPF.Views"
+        mc:Ignorable="d"
+        Title="Ver Produto" Height="730" Width="1350" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <!-- Dictionaries -->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceDictionaries/RectangleDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/ButtonDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/ComboBoxDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/TextBlockDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/TextBoxDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Retângulo azul superior -->
+        <Rectangle Grid.ColumnSpan="3" Style="{StaticResource blueRectangleStyle}"/>
+        <!-- Retângulo azul inferior -->
+        <Rectangle Grid.Row ="5" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource blueRectangleStyle}"/>
+        <!-- Imagem TendesAfter -->
+        <Image Grid.Row="6" Grid.Column="1" Margin="230,15,700,15" Source="/Icons/Beer_Logo.png"/>
+        <TextBlock Text="Desenvolvido por TendesAfterStudio @Todos os direitos reservados" Grid.Row="6" Grid.Column="1" FontWeight="Bold" FontSize="16" Margin="270,15,380,15" Style="{StaticResource textBlockStyle}"/>
+        <!-- Botão voltar para trás -->
+        <Button x:Name="backButton" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,15,15,15" Background="{x:Null}" BorderBrush="{x:Null}" Click="backButton_Click">
+            <Image Source="/Icons/Arrow Back.png"/>
+        </Button>
+        <!-- Formulário -->
+        <!-- Nome -->
+        <TextBlock Text="Nome:" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" FontSize="20" Margin="10,20,0,90" Style="{StaticResource textBlockStyle}"/>
+        <ComboBox x:Name="cbNome" Grid.Row="1" Grid.Column="1" Margin="150,20,400,90" Style="{StaticResource comboBoxStyle}" SelectionChanged="cbNome_SelectionChanged"/>
+        <!-- Unidade -->
+        <TextBlock Text="Unidade:" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" FontSize="20" Margin="10,90,0,20" Style="{StaticResource textBlockStyle}"/>
+        <ComboBox x:Name="cbUnidade" Grid.Row="1" Grid.Column="1" Margin="150,90,400,20" Style="{StaticResource comboBoxStyle}" SelectionChanged="cbNome_SelectionChanged"/>
+        <!-- Quantidade -->
+        <TextBlock Text="Preço p/un:" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" FontSize="20" Margin="10,20,0,90" Style="{StaticResource textBlockStyle}"/>
+        <TextBox x:Name="tbPreçoUnidade" Grid.Row="2" Grid.Column="1" Margin="150,20,400,90" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"/>
+        <!-- Unidade -->
+        <TextBlock Text="Categoria:" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" FontSize="20" Margin="10,90,0,20" Style="{StaticResource textBlockStyle}"/>
+        <TextBox x:Name="tbCategoria" Grid.Row="2" Grid.Column="1" Margin="150,90,400,20" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"/>
+        <!-- ID's -->
+        <TextBlock Text="ID Produto:" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" FontSize="20" Margin="600,20,0,90" Style="{StaticResource textBlockStyle}"/>
+        <TextBox x:Name="tbIDProduto" Grid.Row="1" Grid.Column="1" Margin="750,20,150,90" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"/>
+        <!-- Descrição -->
+        <TextBlock Text="Descrição (Opcional):" Grid.Row="3" Grid.Column="1" Margin="10,20,0,90" HorizontalAlignment="Left" FontSize="20" Style="{StaticResource textBlockStyle}"/>
+        <TextBox x:Name="tbDescrição" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" Margin="10,60,50,20" VerticalScrollBarVisibility="Visible" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"/>
+        <!-- Misc -->
+        <TextBlock Text="Ver Produto" Grid.Column="1" Margin="20,10,700,10" FontSize="36" FontWeight="Bold" Foreground="White"/>
+    </Grid>
+</Window>
